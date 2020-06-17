@@ -1,0 +1,22 @@
+.item-thumbnail-container,
+.item-name-container {
+  padding-left: 5px;
+  padding-right: 5px;
+  vertical-align: middle;
+}
+
+.item-thumbnail-container {
+  font-size: 18px;
+}
+
+::ng-deep .drag-copy-mode .dx-sortable-dragging.dx-sortable-clone * {
+  cursor: copy !important;
+}
+
+::ng-deep .directory-row .dx-command-edit .dx-icon-download {
+  visibility: hidden;
+}
+
+::ng-deep .file-row .dx-command-edit .dx-icon-newfolder {
+  visibility: hidden;
+}
