@@ -12,41 +12,35 @@
   (onEditorPreparing)="onEditorPreparing($event)"
   (onRowPrepared)="onRowPrepared($event)"
   (onToolbarPreparing)="onToolbarPreparing($event)"
-  (onDataErrorOccurred)="onDataErrorOccurred($event)"
->
+  (onDataErrorOccurred)="onDataErrorOccurred($event)">
   <dxo-editing
     mode="row"
     [allowUpdating]="true"
     [allowDeleting]="true"
     [allowAdding]="true"
-    [useIcons]="true"
-  >
+    [useIcons]="true">
   </dxo-editing>
   <dxo-row-dragging
     [allowDropInsideItem]="true"
     [showDragIcons]="false"
     [onDragChange]="onDragChange"
     [onReorder]="onReorder"
-    [onDragMove]="onDragMove"
-  >
+    [onDragMove]="onDragMove">
   </dxo-row-dragging>
   <dxi-column dataField="name" cellTemplate="cellTemplate"></dxi-column>
   <dxi-column
     dataField="size"
     [width]="100"
-    [customizeText]="customizeSizeText"
-  ></dxi-column>
+    [customizeText]="customizeSizeText"></dxi-column>
   <dxi-column
     dataField="dateModified"
     dataType="date"
-    [width]="150"
-  ></dxi-column>
+    [width]="150"></dxi-column>
   <dxi-column type="buttons">
     <dxi-button
       name="add"
       icon="newfolder"
-      hint="Create directory"
-    ></dxi-button>
+      hint="Create directory"></dxi-button>
     <dxi-button name="edit" hint="Rename"></dxi-button>
     <dxi-button name="delete"></dxi-button>
     <dxi-button
@@ -54,8 +48,7 @@
       icon="download"
       hint="Download"
       [visible]="isDownloadButtonVisible"
-      [onClick]="onDownloadButtonClick"
-    >
+      [onClick]="onDownloadButtonClick">
     </dxi-button>
   </dxi-column>
 

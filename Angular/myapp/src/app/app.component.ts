@@ -1,17 +1,12 @@
-import { NgModule, Component, ViewChild, enableProdMode } from "@angular/core";
-import { BrowserModule } from "@angular/platform-browser";
-import { platformBrowserDynamic } from "@angular/platform-browser-dynamic";
-
-import { DxFileManagerModule } from "devextreme-angular";
-import { DxTreeListModule, DxTreeListComponent } from "devextreme-angular";
+import { Component,ViewChild } from '@angular/core';
+import { DxTreeListComponent } from "devextreme-angular";
 import RemoteFileSystemProvider from "devextreme/file_management/remote_provider";
 import FileSystemItem from "devextreme/file_management/file_system_item";
 
 @Component({
-  styleUrls: ["./app.component.css"],
-  selector: "demo-app",
-  templateUrl: "./app.component.html",
-  preserveWhitespaces: true
+  selector: 'app-root',
+  templateUrl: './app.component.html',
+  styleUrls: ['./app.component.css']
 })
 export class AppComponent {
   dataSource: any;
@@ -199,11 +194,3 @@ function getParentPath(path) {
   const index = path.lastIndexOf("/");
   return index !== -1 ? path.substr(0, index) : "";
 }
-
-@NgModule({
-  imports: [BrowserModule, DxFileManagerModule, DxTreeListModule],
-  declarations: [AppComponent],
-  bootstrap: [AppComponent]
-})
-export class AppModule {}
-platformBrowserDynamic().bootstrapModule(AppModule);
