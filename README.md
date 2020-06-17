@@ -6,5 +6,5 @@ This sample shows how to display and edit files and folders in [DevExtreme TreeL
 
 *Files to look at*:
 
-* [app.component.html](./Angular/src/app/app.component.html)
-* [app.component.ts](./Angular/src/app/app.component.ts)
+* [app.component.html](./Angular/myapp/src/app/app.component.html)
+* [app.component.ts](./Angular/myapp/src/app/app.component.ts)
