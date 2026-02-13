@@ -23,7 +23,7 @@ Commonly, providers from the [File Management](https://js.devexpress.com/Documen
 - [TreeList - API Reference](https://js.devexpress.com/Documentation/ApiReference/UI_Components/dxTreeList/)
 - [RemoteFileSystemProvider](https://js.devexpress.com/Documentation/ApiReference/UI_Widgets/dxFileManager/File_System_Providers/Remote/)
 <!-- feedback -->
-## Does this example address your development requirements/objectives?
+## Does This Example Address Your Development Requirements/Objectives?
 
 [<img src="https://www.devexpress.com/support/examples/i/yes-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=devextreme-treelist-show-folders-and-files&~~~was_helpful=yes) [<img src="https://www.devexpress.com/support/examples/i/no-button.svg"/>](https://www.devexpress.com/support/examples/survey.xml?utm_source=github&utm_campaign=devextreme-treelist-show-folders-and-files&~~~was_helpful=no)
 
