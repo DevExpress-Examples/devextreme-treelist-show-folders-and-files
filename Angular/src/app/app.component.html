@@ -1,3 +1,72 @@
 <div class="default-style">
-  <dx-button [text]="buttonText" (onClick)="onClick($event)"></dx-button>
+  <dx-tree-list
+    id="treeList"
+    [dataSource]="dataSource"
+    [showBorders]="true"
+    [remoteOperations]="remoteOperations"
+    keyExpr="key"
+    [parentIdExpr]="parentIdExpr"
+    hasItemsExpr="isDirectory"
+    rootValue=""
+    [focusedRowEnabled]="true"
+    [height]="500"
+    (onEditorPreparing)="onEditorPreparing($event)"
+    (onRowPrepared)="onRowPrepared($event)"
+    (onToolbarPreparing)="onToolbarPreparing($event)"
+    (onDataErrorOccurred)="onDataErrorOccurred($event)"
+  >
+    <dxo-editing
+      mode="row"
+      [allowUpdating]="true"
+      [allowDeleting]="true"
+      [allowAdding]="true"
+      [useIcons]="true"
+    >
+    </dxo-editing>
+    <dxo-row-dragging
+      [allowDropInsideItem]="true"
+      [showDragIcons]="false"
+      [onDragChange]="onDragChange"
+      [onReorder]="onReorder"
+      [onDragMove]="onDragMove"
+    >
+    </dxo-row-dragging>
+    <dxi-column dataField="name" cellTemplate="cellTemplate"></dxi-column>
+    <dxi-column
+      dataField="size"
+      [width]="100"
+      [customizeText]="customizeSizeText"
+    ></dxi-column>
+    <dxi-column
+      dataField="dateModified"
+      dataType="date"
+      [width]="150"
+    ></dxi-column>
+    <dxi-column type="buttons">
+      <dxi-button
+        name="add"
+        icon="newfolder"
+        hint="Create directory"
+      ></dxi-button>
+      <dxi-button name="edit" hint="Rename"></dxi-button>
+      <dxi-button name="delete"></dxi-button>
+      <dxi-button
+        name="download"
+        icon="download"
+        hint="Download"
+        [visible]="isDownloadButtonVisible"
+        [onClick]="onDownloadButtonClick"
+      >
+      </dxi-button>
+    </dxi-column>
+
+    <div *dxTemplate="let options of 'cellTemplate'">
+      <i
+        [class]="
+          'dx-icon-' + getIconName(options.data) + ' item-thumbnail-container'
+        "
+      ></i>
+      <span class="item-name-container">{{ options.data.name }}</span>
+    </div>
+  </dx-tree-list>
 </div>
