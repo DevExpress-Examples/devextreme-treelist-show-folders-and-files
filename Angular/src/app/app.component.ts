@@ -1,4 +1,4 @@
-import { Component, ViewChild } from '@angular/core';
+import { Component, ViewChild, ChangeDetectionStrategy } from '@angular/core';
 import { DxTreeListComponent, DxTreeListModule, DxTreeListTypes } from 'devextreme-angular/ui/tree-list';
 import CustomStore from 'devextreme/data/custom_store';
 import { LoadOptions } from 'devextreme/data';
@@ -16,6 +16,7 @@ type FileItem = FileSystemItem & { parentId?: string };
     selector: 'app-root',
     imports: [DxTreeListModule],
     templateUrl: './app.component.html',
+    changeDetection: ChangeDetectionStrategy.Eager,
     styleUrls: ['./app.component.scss'],
 })
 export class AppComponent {
